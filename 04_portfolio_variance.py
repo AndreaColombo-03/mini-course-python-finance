@@ -1,21 +1,28 @@
 """
-Exercise 5.1 – Price Chart with Matplotlib
+Exercise 4.1 – Portfolio Variance
 
 Objective:
-Plot a simple time series of prices using a line chart.
+Calculate the variance of a portfolio made up of two assets using:
+Var_p = w.T * Cov * w
 """
 
-import matplotlib.pyplot as plt
+import numpy as np
 
-# Sample price data
-prices = [100, 102, 101, 105, 110]
-days = list(range(len(prices)))
+# Expected returns (not used here, but often part of the model)
+mu = np.array([0.1, 0.12])
 
-# Create the plot
-plt.plot(days, prices, marker='o', linestyle='-')
-plt.title("Price Series Over Time")
-plt.xlabel("Day")
-plt.ylabel("Price")
-plt.grid(True)
-plt.tight_layout()
-plt.show()
+# Covariance matrix
+cov_matrix = np.array([
+    [0.005, 0.001],
+    [0.001, 0.006]
+])
+
+# Asset weights in the portfolio
+weights = np.array([0.4, 0.6])
+
+# Portfolio variance calculation
+portfolio_variance = weights.T @ cov_matrix @ weights
+
+# Output
+print(f"Portfolio variance: {portfolio_variance:.6f}")
+
