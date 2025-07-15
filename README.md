@@ -12,14 +12,15 @@ This repository contains Python exercises from a beginner-level introductory cou
 | `04_portfolio_variance.py` | Two-asset portfolio variance |
 | `05_price_chart.py` | Time series chart with Matplotlib |
 | `06_monte_carlo_call_option_eni.py` | Monte Carlo pricing of a call option using real market data |
- |
+| `07_option_pricing_bs_mc.py ` | European option pricing with Black-Scholes and Monte Carlo simulation | 
 
 ##  Tools & Libraries
 
 - Python 3
 - NumPy
+- Pandas
 - Matplotlib
-- SciPy
+- SciPy.stats
 - Yfinance
 
 ##  Author
