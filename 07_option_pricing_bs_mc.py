@@ -1,5 +1,13 @@
+"""
+DISCLAIMER:
+This specific script (Black-Scholes and Monte Carlo simulation) is an advanced topic. 
+The code is an experiment and i understand the underlying financial concepts and the high-level logic of this code, 
+but I am still learning the implementation details and would not be able to replicate it from scratch yet. 
+I keep it here as a reference and for my own learning journey.
+"""
+
 # 1. IMPORT LIBRARIES
-# ------------------------------------------------------------
+
 import numpy as np
 import pandas as pd
 import yfinance as yf
@@ -8,7 +16,7 @@ from scipy.stats import norm
 
 
 # 2. DOWNLOAD REAL DATA
-# ------------------------------------------------------------
+
 ticker = "AAPL"
 df = yf.download(ticker,
                  start="2024-01-01",
