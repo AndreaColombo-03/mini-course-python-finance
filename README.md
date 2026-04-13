@@ -14,6 +14,7 @@ This repository contains Python exercises from a beginner-level introductory cou
 | `06_monte_carlo_call_option_eni.py` | Monte Carlo pricing of a call option using real market data |
 | `07__reference_only_option_pricing_bs_mc.py  ` | European option pricing with Black-Scholes and Monte Carlo simulation |
 | `08_buy_and_hold_profit.py ` | Buy and hold, calculate the profit, plot the results | 
+| `09_alm_prepayment_risk.py ` | ALM Mortgage Prepayment Risk Simulation | 
 
 ##  Tools & Libraries
 
