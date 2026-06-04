@@ -20,7 +20,7 @@ from scipy.stats import norm
 ticker = "AAPL"
 df = yf.download(ticker,
                  start="2024-01-01",
-                 auto_adjust=True,   # avoid warnings + adjusted prices
+                 auto_adjust=True,   # adjusted prices
                  progress=False)
 
 close_series = df["Close"]          # single Series
@@ -34,7 +34,6 @@ print(f"Estimated historical volatility: {sigma:.2%}")
 
  
 # 3. OPTION PARAMETERS
-# ------------------------------------------------------------
 T      = 0.5                     # 6 months
 K      = round(s0 * 1.05, 2)     # strike 5% above spot
 r      = 0.035                   # 3.5% annual continuous rate
@@ -83,7 +82,7 @@ def greeks(s0, k, t, r, sigma, option_type="call"):
 
 
 # 5. PRICES
-# ------------------------------------------------------------
+
 price_bs = bs_price(s0, K, T, r, sigma, otype)
 price_mc, st_paths = mc_european_option(s0, K, T, r, sigma,
                                         n_paths=200_000, option_type=otype)
@@ -94,7 +93,7 @@ print(f"  Monte Carlo   : {price_mc:.4f} USD")
 
  
 # 6. PLOT
-# ------------------------------------------------------------
+
 plt.figure(figsize=(8,4))
 plt.hist(st_paths, bins=100, density=True, color="skyblue")
 plt.axvline(K, color="red", linestyle="--", label=f"Strike = {K}")
