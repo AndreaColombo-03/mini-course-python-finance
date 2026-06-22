@@ -1,9 +1,5 @@
 """
-DISCLAIMER: 
-This specific script (Black-Scholes and Monte Carlo simulation) is an advanced topic. 
-The code is an experiment and i understand the underlying financial concepts and the high-level logic of this code, 
-but I am still learning the implementation details and would not be able to replicate it from scratch yet. 
-I keep it here as a reference and for my own learning journey.
+ reference
 """
 
 # 1. IMPORT LIBRARIES
